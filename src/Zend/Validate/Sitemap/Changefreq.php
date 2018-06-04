@@ -47,7 +47,7 @@ class Zend_Validate_Sitemap_Changefreq extends Zend_Validate_Abstract
      */
     protected $_messageTemplates = array(
         self::NOT_VALID => "'%value%' is not a valid sitemap changefreq",
-        self::INVALID   => "Invalid type given. String expected",
+        self::INVALID   => 'Invalid type given. String expected',
     );
 
     /**

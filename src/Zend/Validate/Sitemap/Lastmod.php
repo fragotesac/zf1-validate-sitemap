@@ -53,7 +53,7 @@ class Zend_Validate_Sitemap_Lastmod extends Zend_Validate_Abstract
      */
     protected $_messageTemplates = array(
         self::NOT_VALID => "'%value%' is not a valid sitemap lastmod",
-        self::INVALID   => "Invalid type given. String expected",
+        self::INVALID   => 'Invalid type given. String expected',
     );
 
     /**

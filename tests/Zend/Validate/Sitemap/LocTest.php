@@ -118,5 +118,4 @@ class Zend_Validate_Sitemap_LocTest extends PHPUnit\Framework\TestCase
             $this->assertContains('String expected', current($messages));
         }
     }
-
 }

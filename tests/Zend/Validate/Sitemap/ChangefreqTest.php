@@ -43,7 +43,7 @@ class Zend_Validate_Sitemap_ChangefreqTest extends PHPUnit\Framework\TestCase
     /**
      * Prepares the environment before running a test
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->_validator = new Zend_Validate_Sitemap_Changefreq();
     }
@@ -51,7 +51,7 @@ class Zend_Validate_Sitemap_ChangefreqTest extends PHPUnit\Framework\TestCase
     /**
      * Cleans up the environment after running a test
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->_validator = null;
     }
@@ -87,7 +87,7 @@ class Zend_Validate_Sitemap_ChangefreqTest extends PHPUnit\Framework\TestCase
         foreach ($values as $value) {
             $this->assertSame(false, $this->_validator->isValid($value));
             $messages = $this->_validator->getMessages();
-            $this->assertContains('is not a valid', current($messages));
+            $this->assertStringContainsString('is not a valid', current($messages));
         }
     }
 
@@ -104,7 +104,7 @@ class Zend_Validate_Sitemap_ChangefreqTest extends PHPUnit\Framework\TestCase
         foreach ($values as $value) {
             $this->assertSame(false, $this->_validator->isValid($value));
             $messages = $this->_validator->getMessages();
-            $this->assertContains('String expected', current($messages));
+            $this->assertStringContainsString('String expected', current($messages));
         }
     }
 }
